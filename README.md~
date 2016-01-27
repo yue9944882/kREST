@@ -1,10 +1,7 @@
 # kREST
 Some implementation of RESTful API building code
 
-Backend Server : 	NGINX
-Based on :			Jersey Framework	
-
-
+Backend Server : NGINX
 Buildup Environment: GNU Linux
 
 
