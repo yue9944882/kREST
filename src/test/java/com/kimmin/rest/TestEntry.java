@@ -9,7 +9,7 @@ public class TestEntry {
 
     /** Fake Test **/
     @Test
-    public static void doTest(){
+    public void doTest(){
         System.err.println("Test Begin...");
     }
 
