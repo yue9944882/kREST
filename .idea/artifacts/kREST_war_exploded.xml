@@ -7,14 +7,15 @@
           <element id="module-output" name="kREST" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-server:1.17.1" />
-          <element id="library" level="project" name="Maven: asm:asm:3.1" />
-          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-core:1.17.1" />
-          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-grizzly2:1.17.1" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-client:1.18" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-core:1.18" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-grizzly2:1.18" />
           <element id="library" level="project" name="Maven: org.glassfish.grizzly:grizzly-http:2.2.16" />
           <element id="library" level="project" name="Maven: org.glassfish.grizzly:grizzly-framework:2.2.16" />
           <element id="library" level="project" name="Maven: org.glassfish.grizzly:grizzly-http-server:2.2.16" />
           <element id="library" level="project" name="Maven: org.glassfish.grizzly:grizzly-rcm:2.2.16" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-server:1.18" />
+          <element id="library" level="project" name="Maven: asm:asm:3.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
