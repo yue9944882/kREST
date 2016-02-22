@@ -1,0 +1,39 @@
+package com.kimmin.rest.example;
+
+/**
+ * Created by min.jin on 2016/2/22.
+ */
+import javax.ws.rs.core.MediaType;
+
+import com.kimmin.rest.example.POJO.RequestJAXB;
+import com.kimmin.rest.example.POJO.ResponseJAXB;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.api.client.config.ClientConfig;
+import com.sun.jersey.api.client.config.DefaultClientConfig;
+import com.sun.jersey.api.json.JSONConfiguration;
+
+public class MyResourceRestJAXBClient {
+
+    public static void main(String[] args) {
+        ClientConfig cc = new DefaultClientConfig();
+        //使用Jersey对POJO的支持，必须设置为true
+        //cc.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);
+        Client client = Client.create(cc);
+
+        WebResource resource = client.resource("http://127.0.0.1:10000/query");
+
+        RequestJAXB req = new RequestJAXB();
+        req.setQuery("name");
+
+        ClientResponse response = resource
+                .accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON)
+                .post(ClientResponse.class, req);
+
+        ResponseJAXB resp = response.getEntity(ResponseJAXB.class);
+        System.out.println(resp.getRespCode() + " " + resp.getRespDesc());
+
+    }
+}
